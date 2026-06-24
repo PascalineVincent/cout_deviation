@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>L’indice de déviation – Le coût d'être soi-même</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-d03aa71f92f0c2dcef84f35c07cdabd9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&amp;family=Source+Serif+4:opsz,wght@8..60,300;8..60,400&amp;family=IBM+Plex+Mono:wght@400&amp;display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Le coût d’être soi-même</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Accueil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./theorie.html"> 
+<span class="menu-text">La théorie</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./deviation.html" aria-current="page"> 
+<span class="menu-text">L’indice de déviation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resultats.html"> 
+<span class="menu-text">Résultats</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./limites.html"> 
+<span class="menu-text">Limites &amp; perspectives</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#de-la-distance-à-la-direction" id="toc-de-la-distance-à-la-direction" class="nav-link active" data-scroll-target="#de-la-distance-à-la-direction">De la distance à la direction</a></li>
+  <li><a href="#indice-1-la-distance-absolue" id="toc-indice-1-la-distance-absolue" class="nav-link" data-scroll-target="#indice-1-la-distance-absolue">Indice 1 — La distance absolue</a></li>
+  <li><a href="#indice-2-la-déviation-signée" id="toc-indice-2-la-déviation-signée" class="nav-link" data-scroll-target="#indice-2-la-déviation-signée">Indice 2 — La déviation signée</a></li>
+  <li><a href="#les-quatre-profils-en-clair" id="toc-les-quatre-profils-en-clair" class="nav-link" data-scroll-target="#les-quatre-profils-en-clair">Les quatre profils en clair</a></li>
+  <li><a href="#les-normes-empiriques" id="toc-les-normes-empiriques" class="nav-link" data-scroll-target="#les-normes-empiriques">Les normes empiriques</a></li>
+  <li><a href="#distribution-des-quatre-profils" id="toc-distribution-des-quatre-profils" class="nav-link" data-scroll-target="#distribution-des-quatre-profils">Distribution des quatre profils</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">L’indice de déviation</h1>
+<p class="subtitle lead">Mesurer l’écart entre l’identité de chacun et la norme de son groupe — et dans quel sens</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="de-la-distance-à-la-direction" class="level2">
+<h2 class="anchored" data-anchor-id="de-la-distance-à-la-direction">De la distance à la direction</h2>
+<p>On pourrait mesurer la déviation simplement comme une <strong>distance absolue</strong> : combien Marc s’éloigne-t-il de la norme de son groupe, peu importe dans quel sens ? C’est l’indice <span class="math inline">\(\Delta_i\)</span>.</p>
+<p>Mais la théorie d’Akerlof &amp; Kranton suggère que la <strong>direction</strong> de la déviation compte : s’éloigner vers le pôle féminin quand on est un homme n’est peut-être pas la même chose que s’éloigner vers le pôle masculin. Ce projet teste les deux.</p>
+<hr>
+</section>
+<section id="indice-1-la-distance-absolue" class="level2">
+<h2 class="anchored" data-anchor-id="indice-1-la-distance-absolue">Indice 1 — La distance absolue</h2>
+<p><span class="math display">\[\Delta_i = |\hat{\iota}_i - \bar{\iota}_{g_i}|\]</span></p>
+<ul>
+<li><span class="math inline">\(\hat{\iota}_i\)</span> = score LASSO de <span class="math inline">\(i\)</span> (0 = féminin, 1 = masculin)</li>
+<li><span class="math inline">\(\bar{\iota}_{g_i}\)</span> = score LASSO moyen de son groupe de sexe</li>
+</ul>
+<p><strong>Interprétation</strong> : combien <span class="math inline">\(i\)</span> s’écarte de la norme de son groupe, sans tenir compte de la direction. Marc (homme, score 0,15) et Jordan bis (homme, score 0,95) ont la même distance à la norme masculine — mais leurs profils sont opposés.</p>
+<hr>
+</section>
+<section id="indice-2-la-déviation-signée" class="level2">
+<h2 class="anchored" data-anchor-id="indice-2-la-déviation-signée">Indice 2 — La déviation signée</h2>
+<p><span class="math display">\[\delta_i = \hat{\iota}_i - \bar{\iota}_{g_i}\]</span></p>
+<p><strong>Interprétation</strong> : - <span class="math inline">\(\delta_i &lt; 0\)</span> → identité <strong>en dessous</strong> de la norme du groupe (un homme plus féminin que la moyenne des hommes, ou une femme plus féminine que la moyenne des femmes) - <span class="math inline">\(\delta_i &gt; 0\)</span> → identité <strong>au-dessus</strong> de la norme du groupe (un homme plus masculin que la moyenne, ou une femme plus masculine que la moyenne)</p>
+<p>Cela produit <strong>quatre profils</strong> distincts :</p>
+<div class="four-profiles-diagram">
+  <svg width="100%" height="280" viewbox="0 0 700 280" preserveaspectratio="xMidYMid meet">
+    <defs>
+      <lineargradient id="specGrad4" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0%" stop-color="#C26B6B"></stop>
+        <stop offset="100%" stop-color="#4A8FC0"></stop>
+      </lineargradient>
+      <marker id="arr-left" markerwidth="8" markerheight="8" refx="0" refy="3" orient="auto">
+        <path d="M8,0 L0,3 L8,6 z" fill="#C8B97A"></path>
+      </marker>
+      <marker id="arr-right" markerwidth="8" markerheight="8" refx="8" refy="3" orient="auto">
+        <path d="M0,0 L8,3 L0,6 z" fill="#C8B97A"></path>
+      </marker>
+    </defs>
+
+    <!-- Spectre -->
+    <rect x="50" y="130" width="600" height="12" rx="6" fill="url(#specGrad4)" opacity="0.7"></rect>
+    <text x="50" y="158" fill="#C26B6B" font-size="11">0 — Pôle féminin</text>
+    <text x="565" y="158" fill="#4A8FC0" font-size="11">1 — Pôle masculin</text>
+
+    <!-- Norme femmes ≈ 0,42 → x = 50 + 0.42*600 = 302 -->
+    <line x1="302" y1="118" x2="302" y2="148" stroke="#C26B6B" stroke-width="2.5"></line>
+    <text x="302" y="112" fill="#C26B6B" font-size="10" text-anchor="middle">Norme femmes ≈ 0,42</text>
+
+    <!-- Norme hommes ≈ 0,60 → x = 50 + 0.60*600 = 410 -->
+    <line x1="410" y1="118" x2="410" y2="148" stroke="#4A8FC0" stroke-width="2.5"></line>
+    <text x="410" y="112" fill="#4A8FC0" font-size="10" text-anchor="middle">Norme hommes ≈ 0,60</text>
+
+    <!-- PROFIL 1 : Femme conforme (δ < 0) → très féminine, ex score 0,20 → x=170 -->
+    <circle cx="170" cy="136" r="10" fill="#C26B6B" stroke="#D6E4F2" stroke-width="2"></circle>
+    <!-- Flèche vers norme femmes -->
+    <line x1="180" y1="136" x2="295" y2="136" stroke="#C8B97A" stroke-width="1.5" marker-end="url(#arr-right)" stroke-dasharray="4,3"></line>
+    <text x="170" y="185" fill="#D6E4F2" font-size="10" text-anchor="middle" font-weight="bold">Femme conforme</text>
+    <text x="170" y="198" fill="#7A9DBF" font-size="9" text-anchor="middle">δ &lt; 0 : plus féminine</text>
+    <text x="170" y="211" fill="#7A9DBF" font-size="9" text-anchor="middle">que la norme féminine</text>
+
+    <!-- PROFIL 2 : Femme atypique (δ > 0) → score 0,55 → x=380 -->
+    <circle cx="380" cy="136" r="10" fill="#C26B6B" stroke="#D6E4F2" stroke-width="2" stroke-dasharray="4,2"></circle>
+    <line x1="374" y1="136" x2="308" y2="136" stroke="#C8B97A" stroke-width="1.5" marker-end="url(#arr-left)" stroke-dasharray="4,3"></line>
+    <text x="380" y="185" fill="#D6E4F2" font-size="10" text-anchor="middle" font-weight="bold">Femme atypique</text>
+    <text x="380" y="198" fill="#7A9DBF" font-size="9" text-anchor="middle">δ &gt; 0 : plus masculine</text>
+    <text x="380" y="211" fill="#7A9DBF" font-size="9" text-anchor="middle">que la norme féminine</text>
+
+    <!-- PROFIL 3 : Homme atypique (δ < 0) → score 0,35 → x=260 -->
+    <circle cx="260" cy="136" r="10" fill="#4A8FC0" stroke="#D6E4F2" stroke-width="2" stroke-dasharray="4,2"></circle>
+    <line x1="266" y1="136" x2="403" y2="136" stroke="#C8B97A" stroke-width="1.5" marker-end="url(#arr-right)" stroke-dasharray="4,3"></line>
+    <text x="260" y="240" fill="#D6E4F2" font-size="10" text-anchor="middle" font-weight="bold">Homme atypique</text>
+    <text x="260" y="253" fill="#7A9DBF" font-size="9" text-anchor="middle">δ &lt; 0 : plus féminin</text>
+    <text x="260" y="266" fill="#7A9DBF" font-size="9" text-anchor="middle">que la norme masculine</text>
+
+    <!-- PROFIL 4 : Homme conforme (δ > 0) → score 0,82 → x=542 -->
+    <circle cx="542" cy="136" r="10" fill="#4A8FC0" stroke="#D6E4F2" stroke-width="2"></circle>
+    <line x1="536" y1="136" x2="417" y2="136" stroke="#C8B97A" stroke-width="1.5" marker-end="url(#arr-left)" stroke-dasharray="4,3"></line>
+    <text x="542" y="240" fill="#D6E4F2" font-size="10" text-anchor="middle" font-weight="bold">Homme conforme</text>
+    <text x="542" y="253" fill="#7A9DBF" font-size="9" text-anchor="middle">δ &gt; 0 : plus masculin</text>
+    <text x="542" y="266" fill="#7A9DBF" font-size="9" text-anchor="middle">que la norme masculine</text>
+
+    <!-- Légende cercles -->
+    <circle cx="80" cy="30" r="7" fill="#C26B6B" stroke="#D6E4F2" stroke-width="1.5"></circle>
+    <text x="92" y="34" fill="#D6E4F2" font-size="10">Femme</text>
+    <circle cx="140" cy="30" r="7" fill="#4A8FC0" stroke="#D6E4F2" stroke-width="1.5"></circle>
+    <text x="152" y="34" fill="#D6E4F2" font-size="10">Homme</text>
+    <circle cx="210" cy="30" r="7" fill="none" stroke="#D6E4F2" stroke-width="1.5" stroke-dasharray="4,2"></circle>
+    <text x="222" y="34" fill="#7A9DBF" font-size="10">Contour pointillé = atypique</text>
+    <line x1="360" y1="30" x2="400" y2="30" stroke="#C8B97A" stroke-width="1.5" marker-end="url(#arr-right)" stroke-dasharray="4,3"></line>
+    <text x="408" y="34" fill="#7A9DBF" font-size="10">Flèche = direction vers la norme</text>
+  </svg>
+</div>
+<hr>
+</section>
+<section id="les-quatre-profils-en-clair" class="level2">
+<h2 class="anchored" data-anchor-id="les-quatre-profils-en-clair">Les quatre profils en clair</h2>
+<div class="profils-grid">
+  <div class="profil-card conforme">
+    <h4 class="anchored">Femme conforme</h4>
+    <p>δ &lt; 0 — identité plus féminine que la norme féminine</p>
+    <p class="profil-sub">Renforce sa position dans la norme prescrite</p>
+  </div>
+  <div class="profil-card atypique">
+    <h4 class="anchored">Femme atypique</h4>
+    <p>δ &gt; 0 — identité plus masculine que la norme féminine</p>
+    <p class="profil-sub">S'écarte vers le pôle opposé à sa norme</p>
+  </div>
+  <div class="profil-card atypique">
+    <h4 class="anchored">Homme atypique</h4>
+    <p>δ &lt; 0 — identité plus féminine que la norme masculine</p>
+    <p class="profil-sub">S'écarte vers le pôle opposé à sa norme</p>
+  </div>
+  <div class="profil-card conforme">
+    <h4 class="anchored">Homme conforme</h4>
+    <p>δ &gt; 0 — identité plus masculine que la norme masculine</p>
+    <p class="profil-sub">Renforce sa position dans la norme prescrite</p>
+  </div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Pourquoi distinguer les deux indices ?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(\Delta_i\)</span> (distance absolue) teste si <strong>l’intensité</strong> de la déviation importe, indépendamment de sa direction. <span class="math inline">\(\delta_i\)</span> (déviation signée) teste si la <strong>direction</strong> importe — et permet de comparer les conformes aux atypiques dans chaque groupe.</p>
+</div>
+</div>
+<hr>
+</section>
+<section id="les-normes-empiriques" class="level2">
+<h2 class="anchored" data-anchor-id="les-normes-empiriques">Les normes empiriques</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>epc <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"epc.rds"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>epc<span class="sc">$</span>lasso_inv <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> epc<span class="sc">$</span>score_LASSO_norm</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>normes <span class="ot">&lt;-</span> epc <span class="sc">|&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Sex) <span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Norme (score moyen)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">mean</span>(lasso_inv, <span class="at">na.rm=</span><span class="cn">TRUE</span>), <span class="dv">3</span>),</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Écart-type</span><span class="st">`</span>          <span class="ot">=</span> <span class="fu">round</span>(<span class="fu">sd</span>(lasso_inv,   <span class="at">na.rm=</span><span class="cn">TRUE</span>), <span class="dv">3</span>),</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">N                     =</span> <span class="fu">n</span>()</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(normes, <span class="at">caption=</span><span class="st">"Norme identitaire empirique par groupe de sexe"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Norme identitaire empirique par groupe de sexe</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Sex</th>
+<th style="text-align: right;">Norme (score moyen)</th>
+<th style="text-align: right;">Écart-type</th>
+<th style="text-align: right;">N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Men</td>
+<td style="text-align: right;">0.599</td>
+<td style="text-align: right;">0.098</td>
+<td style="text-align: right;">4162</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Women</td>
+<td style="text-align: right;">0.422</td>
+<td style="text-align: right;">0.132</td>
+<td style="text-align: right;">5072</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<hr>
+</section>
+<section id="distribution-des-quatre-profils" class="level2">
+<h2 class="anchored" data-anchor-id="distribution-des-quatre-profils">Distribution des quatre profils</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="deviation_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
+<figcaption>Distribution de la déviation signée δ dans les deux groupes de sexe. Les valeurs négatives indiquent une identité en dessous de la norme du groupe ; les valeurs positives au-dessus.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><a href="./resultats.html" class="btn-next">→ Les résultats</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Pascaline Vincent — Recherche reproductible</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p><a href="https://github.com/pascalinevincent">Code sur GitHub</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

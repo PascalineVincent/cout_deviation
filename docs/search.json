@@ -1,0 +1,471 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Le coût d’être soi-même ?",
+    "section": "",
+    "text": "C’est la prédiction centrale de la théorie économique de l’identité. Ce projet la teste systématiquement — sur quatre outcomes, quatre profils, deux mesures d’identité. La réponse, dans le domaine des loisirs culturels, est non."
+  },
+  {
+    "objectID": "index.html#et-si-pratiquer-des-activités-pour-lautre-genre-avait-un-coût-sur-votre-bien-être",
+    "href": "index.html#et-si-pratiquer-des-activités-pour-lautre-genre-avait-un-coût-sur-votre-bien-être",
+    "title": "Le coût d’être soi-même",
+    "section": "",
+    "text": "C’est la question que pose ce projet. Pas un coût financier — un coût identitaire. La théorie économique prédit que s’écarter des normes de son groupe diminue le bien-être. Peut-on le mesurer ?"
+  },
+  {
+    "objectID": "index.html#une-situation-concrète",
+    "href": "index.html#une-situation-concrète",
+    "title": "Le coût d’être soi-même",
+    "section": "Une situation concrète",
+    "text": "Une situation concrète\n\n  \n    \n      🎣\n    \n    \n      Marc, position identitaire très masculine (ι̂ = 0,85)\n      Pratiques : tricot, cuisine, jardinage ornemental\n      Pratiques atypiques pour sa position\n    \n  \n\n  \n    \n      🧶\n    \n    \n      Julie, position identitaire très féminine (ι̂ = 0,12)\n      Pratiques : tricot, cuisine, jardinage\n      Pratiques conformes à sa position\n    \n  \n\n  \n    \n      📷\n    \n    \n      Sam, position identitaire centrale (ι̂ = 0,48)\n      Pratiques : photographie, musique, cuisine\n      Pratiques neutres — peu de déviation\n    \n  \n\nLa théorie prédit que Marc — qui pratique des activités typiquement féminines malgré une identité masculine — supporte un coût identitaire que Julie et Sam n’ont pas.\nCe site documente comment on mesure ce coût, et ce qu’on trouve."
+  },
+  {
+    "objectID": "index.html#le-projet-en-trois-questions",
+    "href": "index.html#le-projet-en-trois-questions",
+    "title": "Le coût d’être soi-même",
+    "section": "Le projet en trois questions",
+    "text": "Le projet en trois questions\n\n  \n    01\n    D'où vient l'idée ?\n    La théorie économique de l'identité (Akerlof & Kranton, 2000) prédit que dévier des normes de son groupe coûte de l'utilité.\n    La théorie →\n  \n  \n    02\n    Comment mesure-t-on la déviation ?\n    On construit un indice individuel qui cumule les pratiques atypiques, pondérées par leur intensité identitaire.\n    L'indice →\n  \n  \n    03\n    Qu'est-ce qu'on trouve ?\n    L'effet de l'indice de déviation sur la santé perçue et le sentiment de manque de temps libre.\n    Les résultats →"
+  },
+  {
+    "objectID": "index.html#ce-projet-en-lien-avec-les-autres",
+    "href": "index.html#ce-projet-en-lien-avec-les-autres",
+    "title": "Le coût d’être soi-même ?",
+    "section": "Ce projet en lien avec les autres",
+    "text": "Ce projet en lien avec les autres\n\n\n\n\n\n\nCe site est le troisième volet d’un programme de recherche sur l’identité de genre et les pratiques culturelles.\n\nMesure de l’identité — construction des indices ACM et LASSO\nQui tricote, qui pêche ? — indice continu de ségrégation β_k\nCe site — test empirique du coût de déviation\n\n\n\n\n\n\n\nPage\nPour qui ?\nDurée\n\n\n\n\nLa théorie\nTout le monde\n~5 min\n\n\nL’indice de déviation\nIntéressé·es par la méthode\n~8 min\n\n\nRésultats\nTout le monde\n~5 min\n\n\nDiscussion\nChercheur·ses\n~5 min"
+  },
+  {
+    "objectID": "deviation.html",
+    "href": "deviation.html",
+    "title": "L’indice de déviation",
+    "section": "",
+    "text": "On pourrait mesurer la déviation simplement comme une distance absolue : combien Marc s’éloigne-t-il de la norme de son groupe, peu importe dans quel sens ? C’est l’indice \\(\\Delta_i\\).\nMais la théorie d’Akerlof & Kranton suggère que la direction de la déviation compte : s’éloigner vers le pôle féminin quand on est un homme n’est peut-être pas la même chose que s’éloigner vers le pôle masculin. Ce projet teste les deux."
+  },
+  {
+    "objectID": "deviation.html#lidée-accumuler-les-écarts-pondérés-par-leur-importance",
+    "href": "deviation.html#lidée-accumuler-les-écarts-pondérés-par-leur-importance",
+    "title": "L’indice de déviation",
+    "section": "",
+    "text": "Pour chaque individu, on veut un score unique qui résume combien il s’écarte de sa norme identitaire dans ses pratiques. L’intuition :\n\nPratiquer le tricot en ayant une identité très masculine → gros écart (β ≈ −19)\nPratiquer la généalogie en ayant une identité très masculine → petit écart (β ≈ +0,7, plutôt masculin de toute façon)\nPratiquer la musique quelle que soit son identité → pas d’écart (β ≈ 0)\n\nL’indice de déviation somme ces écarts, pondérés par l’intensité de la norme."
+  },
+  {
+    "objectID": "deviation.html#la-formule",
+    "href": "deviation.html#la-formule",
+    "title": "L’indice de déviation",
+    "section": "",
+    "text": "\\[\\Delta_i = |\\hat{\\iota}_i - \\bar{\\iota}_{g_i}|\\]\noù : - \\(\\hat{\\iota}_i\\) = le score LASSO de l’individu \\(i\\) (son identité continue, 0=féminin, 1=masculin) - \\(\\bar{\\iota}_{g_i}\\) = le score LASSO moyen de son groupe de sexe \\(g_i\\) (hommes ou femmes)\nC’est simplement la distance entre où l’on est sur le spectre identitaire et où se situe en moyenne son groupe."
+  },
+  {
+    "objectID": "deviation.html#un-exemple-pas-à-pas",
+    "href": "deviation.html#un-exemple-pas-à-pas",
+    "title": "L’indice de déviation",
+    "section": "Un exemple pas à pas",
+    "text": "Un exemple pas à pas\n\n  Marc — ι̂ = 0,85 (pôle masculin)\n  Marc pratique : tricot, cuisine, jardinage ornemental\n\n  \n\n\n\nPratique\nβ_k\nPratique par Marc ?\nAtypique pour Marc ?\nContribution |β_k|\n\n\n\n\n🧶 Tricot\n−19,3\n✓\nOui (féminin, Marc est masculin)\n+19,3\n\n\n🍳 Cuisine\n−4,4\n✓\nOui\n+4,4\n\n\n🌸 Jardinage ornemental\n−3,6\n✓\nOui\n+3,6\n\n\n\nDéviation totale de Marc\n27,3\n\n\n\n\n\n\n  Julie — ι̂ = 0,12 (pôle féminin)\n  Julie pratique : tricot, cuisine, jardinage ornemental\n\n  \n\n\n\nPratique\nβ_k\nPratique par Julie ?\nAtypique pour Julie ?\nContribution\n\n\n\n\n🧶 Tricot\n−19,3\n✓\nNon (féminin, Julie est féminine)\n0\n\n\n🍳 Cuisine\n−4,4\n✓\nNon\n0\n\n\n🌸 Jardinage ornemental\n−3,6\n✓\nNon\n0\n\n\n\nDéviation totale de Julie\n0\n\n\n\n\n\n\nMêmes pratiques, identités différentes → déviations très différentes. C’est exactement ce que l’indice capte."
+  },
+  {
+    "objectID": "deviation.html#une-précaution-importante-le-split-sample",
+    "href": "deviation.html#une-précaution-importante-le-split-sample",
+    "title": "L’indice de déviation",
+    "section": "Une précaution importante : le split-sample",
+    "text": "Une précaution importante : le split-sample\n\n  \n    ⚠️ Le problème de circularité\n    \n      Les β_k sont estimés à partir des pratiques. L'indice de déviation est construit\n      à partir des β_k et des pratiques. Si on estime ensuite un modèle de bien-être\n      sur les mêmes données... le résultat risque d'être mécanique, pas informatif.\n    \n  \n  \n    ✅ La solution : diviser l'échantillon\n    \n      \n      \n      Échantillon complet (N individus)\n      \n      \n      \n      \n      \n      50% — Échantillon A\n      Estimation des β_k\n      \n      \n      50% — Échantillon B\n      Calcul Δᵢ + modèle bien-être\n    \n    \n      Les β_k sont estimés sur A, appliqués sur B. \n      Les deux échantillons ne se croisent jamais."
+  },
+  {
+    "objectID": "deviation.html#distribution-de-lindice-dans-les-données",
+    "href": "deviation.html#distribution-de-lindice-dans-les-données",
+    "title": "L’indice de déviation",
+    "section": "Distribution de l’indice dans les données",
+    "text": "Distribution de l’indice dans les données\n\n\n\n\n\nDistribution de l’indice de déviation (normalisé) selon le genre binaire. On s’attend à ce que les hommes et les femmes aient des distributions similaires — la déviation dépend de la position identitaire, pas du genre déclaré.\n\n\n\n\n\n\n\n\n\n\nTipCe qu’on attend\n\n\n\nSi la théorie est juste, les individus avec un indice de déviation élevé devraient déclarer une moins bonne santé et un plus grand sentiment de manque de temps libre — après avoir contrôlé pour l’âge, le diplôme, le revenu et la situation professionnelle.\n\n\n→ Les résultats"
+  },
+  {
+    "objectID": "limites.html",
+    "href": "limites.html",
+    "title": "Discussion",
+    "section": "",
+    "text": "La théorie d’Akerlof & Kranton prédit que dévier des normes de son groupe coûte de l’utilité. On a testé cette prédiction de manière systématique : deux mesures d’identité, quatre outcomes de bien-être et de vie sociale, quatre profils distinguant le sexe et la direction de la déviation — soit 16 modèles avec contrôles socio-démographiques complets.\nRésultat : effet nul généralisé."
+  },
+  {
+    "objectID": "limites.html#ce-que-ce-projet-apporte",
+    "href": "limites.html#ce-que-ce-projet-apporte",
+    "title": "Limites & perspectives",
+    "section": "",
+    "text": "✅\n    \n    À notre connaissance, c'est le premier papier à tester le coût de déviation d'Akerlof & Kranton avec des pratiques culturelles observées et un indice continu d'identité.\n  \n  \n    ✅\n    \n    L'indice Δᵢ est calculable dans toute enquête qui contient des pratiques culturelles — sans question supplémentaire sur l'identité.\n  \n  \n    ✅\n    \n    Les résultats sont testés avec deux mesures d'identité différentes (ACM et LASSO). Un accord entre les deux renforce la confiance."
+  },
+  {
+    "objectID": "limites.html#les-limites-honnêtes",
+    "href": "limites.html#les-limites-honnêtes",
+    "title": "Discussion",
+    "section": "Les limites honnêtes",
+    "text": "Les limites honnêtes\n\n\n  \n    Limite majeure\n    🔄 Circularité de la mesure d'identité\n    \n      Le score LASSO est construit à partir des pratiques culturelles. \n      La déviation est calculée à partir du score LASSO. \n      Il est impossible de séparer complètement l'identité mesurée \n      des pratiques qui la révèlent — même si on a minimisé la circularité \n      en ancrant la norme sur le sexe déclaré (variable externe).\n    \n    \n      Solution idéale : une mesure d'identité autodéclarée \n      indépendante des pratiques (Brenøe et al., 2022), absente de l'EPC.\n    \n  \n\n  \n    Limite importante\n    🎯 Tests multiples\n    \n      16 modèles estimés, un seul effet marginal à p = 0,049. \n      Avec une correction de Bonferroni, le seuil ajusté est 0,003 \n      — aucun résultat ne tient. Le résultat nul est donc a fortiori \n      robuste, mais l'effet marginal ne doit pas être surinterprété.\n    \n  \n\n  \n    Limite importante\n    ↔️ Absence de causalité\n    \n      Une coupe transversale ne permet pas d'établir la causalité. \n      Les individus atypiques peuvent différer sur des dimensions \n      non observées (personnalité, ouverture d'esprit) qui expliquent \n      à la fois leur position identitaire et leur bien-être.\n    \n  \n\n  \n    Limite secondaire\n    📊 Puissance statistique limitée\n    \n      En divisant l'échantillon en quatre profils, chaque sous-groupe \n      compte environ 2 000 individus — suffisant pour des effets modérés, \n      mais insuffisant pour détecter des effets faibles avec précision."
+  },
+  {
+    "objectID": "limites.html#les-perspectives-ouvertes",
+    "href": "limites.html#les-perspectives-ouvertes",
+    "title": "Discussion",
+    "section": "Les perspectives ouvertes",
+    "text": "Les perspectives ouvertes\n\n\n  \n    01\n    Tester dans des domaines à forte pression normative\n    Choix d'orientation, marché du travail, relations de couple — \n    des domaines où la déviation est publique et économiquement sanctionnée. \n    La théorie d'A&K devrait y être plus visible.\n  \n\n  \n    02\n    Mesure d'identité externe aux pratiques\n    Valider le score LASSO contre une mesure autodéclarée d'identité \n    de genre — sur le modèle de Brenøe et al. (2022) — \n    pour s'assurer qu'il capte bien l'identité et non les goûts culturels.\n  \n\n  \n    03\n    Outcomes plus ciblés\n    Des mesures de bien-être identitaire spécifiques — sentiment de jugement, \n    anxiété sociale, confiance en soi — seraient plus sensibles \n    au coût de déviation qu'une mesure globale de santé perçue.\n  \n\n  \n    04\n    Contextes sociaux hétérogènes\n    Le coût de déviation est-il plus fort dans des milieux plus normatifs \n    (zones rurales, certaines professions, tranches d'âge plus âgées) ? \n    L'interaction entre déviation et contexte social reste à explorer.\n  \n\n\n\n\n\n\n\n\n\nNoteProgramme de recherche complet\n\n\n\n\nMesure de l’identité — construction des indices ACM et LASSO\nQui tricote, qui pêche ? — indice continu de ségrégation β_k\nCe site — test empirique du coût de déviation\n\nLe code complet est disponible sur GitHub."
+  },
+  {
+    "objectID": "resultats.html",
+    "href": "resultats.html",
+    "title": "Résultats",
+    "section": "",
+    "text": "On teste si la déviation identitaire affecte le bien-être selon quatre profils distincts — en distinguant non seulement le sexe, mais aussi la direction de la déviation :\n\n  \n    \n    Score LASSO inférieur à la norme masculine\n    Identité plus féminine que la moyenne des hommes\n  \n  \n    \n    Score LASSO supérieur à la norme masculine\n    Identité plus masculine que la moyenne des hommes\n  \n  \n    \n    Score LASSO inférieur à la norme féminine\n    Identité plus féminine que la moyenne des femmes\n  \n  \n    \n    Score LASSO supérieur à la norme féminine\n    Identité plus masculine que la moyenne des femmes\n  \n\nPour chacun des quatre profils, on estime l’effet de la déviation sur quatre outcomes : santé perçue, satisfaction en temps libre, fréquence des sorties, fréquence de recevoir chez soi. Soit 16 modèles au total, tous contrôlés pour l’âge, le revenu, le diplôme, la situation d’activité et le statut conjugal."
+  },
+  {
+    "objectID": "resultats.html#ce-quon-cherche",
+    "href": "resultats.html#ce-quon-cherche",
+    "title": "Résultats",
+    "section": "",
+    "text": "La théorie prédit que les individus avec un indice de déviation élevé devraient avoir :\n\nUne moins bonne santé perçue\nUn plus grand sentiment de manque de temps libre\n\n…après avoir contrôlé pour l’âge, le diplôme, le revenu et la situation d’activité.\n\n\n\n\n\n\nNoteComment lire les graphiques\n\n\n\nLa santé perçue est codée 5 = très bonne, 1 = très mauvaise. Si la déviation a un coût, on s’attend à une courbe décroissante : plus la déviation est forte, moins bonne est la santé."
+  },
+  {
+    "objectID": "resultats.html#résultat-1-santé-perçue",
+    "href": "resultats.html#résultat-1-santé-perçue",
+    "title": "Résultats",
+    "section": "Résultat 1 : Santé perçue",
+    "text": "Résultat 1 : Santé perçue\n\n\n\n\n\nSanté perçue prédite selon l’indice de déviation (toutes choses égales par ailleurs). Échelle : 5 = très bonne santé, 1 = très mauvaise. La bande représente l’IC à 95 %.\n\n\n\n\n\n\n-0.0154\n\n\n Effet de l'indice de déviation sur la santé perçue (échelle 1–5)&lt;br&gt;\n &lt;span class=\"result-pval\"&gt;p = 0.856 — non significatif au seuil 5 %&lt;/span&gt;&lt;br&gt;\n &lt;span style=\"color:#7A9DBF;font-size:0.8rem;\"&gt;\n   Un coefficient négatif confirme la théorie : plus de déviation → moins bonne santé\n &lt;/span&gt;"
+  },
+  {
+    "objectID": "resultats.html#résultat-2-manque-de-temps-libre",
+    "href": "resultats.html#résultat-2-manque-de-temps-libre",
+    "title": "Résultats",
+    "section": "Résultat 2 : Manque de temps libre",
+    "text": "Résultat 2 : Manque de temps libre\n\n\n\n\n\nProbabilité de déclarer un manque de temps libre fréquent selon l’indice de déviation (toutes choses égales par ailleurs).\n\n\n\n\n\n\n+0.1960\n\n\n Effet de l'indice de déviation sur le manque de temps libre (0/1)&lt;br&gt;\n &lt;span class=\"result-pval\"&gt;p = 0.000 — &lt;strong&gt;***&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;\n &lt;span style=\"color:#7A9DBF;font-size:0.8rem;\"&gt;\n   Un coefficient positif confirme la théorie : plus de déviation → plus de manque de temps libre ressenti\n &lt;/span&gt;"
+  },
+  {
+    "objectID": "resultats.html#robustesse-les-résultats-tiennent-ils-avec-le-lasso",
+    "href": "resultats.html#robustesse-les-résultats-tiennent-ils-avec-le-lasso",
+    "title": "Résultats",
+    "section": "Robustesse : les résultats tiennent-ils avec le LASSO ?",
+    "text": "Robustesse : les résultats tiennent-ils avec le LASSO ?\n\n\n\n\n\nComparaison des coefficients de déviation entre les deux mesures d’identité (ACM et LASSO réorienté) sur la santé perçue. Si les deux barres pointent dans la même direction, le résultat est robuste.\n\n\n\n\n→ Limites et perspectives"
+  },
+  {
+    "objectID": "theorie.html",
+    "href": "theorie.html",
+    "title": "La théorie",
+    "section": "",
+    "text": "En 2000, Akerlof et Kranton publient un article qui bouscule l’économie standard. Leur argument : les individus ne maximisent pas seulement leurs gains matériels — ils maximisent aussi leur cohérence identitaire. Agir en accord avec les normes de son groupe procure une satisfaction. Dévier de ces normes génère un coût.\n\n  \n    Utilité = gains des actions\n            − coût de déviation par rapport à la norme\n  \n  \n    Ce coût n'est pas financier. C'est un malaise, une dissonance entre qui on est \n    et ce qu'on fait — ou entre qui on est et ce que les autres attendent de nous."
+  },
+  {
+    "objectID": "theorie.html#lidée-de-base-on-nest-pas-juste-des-calculateurs-économiques",
+    "href": "theorie.html#lidée-de-base-on-nest-pas-juste-des-calculateurs-économiques",
+    "title": "La théorie",
+    "section": "",
+    "text": "L’économie standard décrit des individus qui maximisent leur satisfaction en choisissant les meilleures options disponibles. Mais cette vision oublie quelque chose : les gens ont une identité — un sentiment de qui ils sont — et ce sentiment influence leurs choix.\nEn 2000, les économistes George Akerlof et Rachel Kranton publient un article qui va transformer la discipline : “Economics and Identity”. Leur idée centrale : l’identité n’est pas juste un trait psychologique, c’est une variable économique qui entre dans la fonction d’utilité."
+  },
+  {
+    "objectID": "theorie.html#la-fonction-dutilité-identitaire",
+    "href": "theorie.html#la-fonction-dutilité-identitaire",
+    "title": "La théorie",
+    "section": "La fonction d’utilité identitaire",
+    "text": "La fonction d’utilité identitaire\n\n  \n    Utilité = gains des actions\n            − coût de déviation par rapport à la norme\n  \n\nPlus précisément, pour un individu \\(i\\) qui appartient à un groupe (ici, une position sur le spectre de l’identité de genre) :\n\\[U_i = u(a_i) - \\sum_k \\underbrace{|\\beta_k|}_{\\text{intensité de la norme}} \\cdot \\underbrace{p_{ik} \\cdot \\mathbf{1}[\\text{atypique}]}_{\\text{pratique atypique ?}}\\]"
+  },
+  {
+    "objectID": "theorie.html#les-trois-ingrédients-du-modèle",
+    "href": "theorie.html#les-trois-ingrédients-du-modèle",
+    "title": "La théorie",
+    "section": "Les trois ingrédients du modèle",
+    "text": "Les trois ingrédients du modèle\n\n  \n    🪪\n    L'identité\n    Chaque individu occupe une position sur le spectre de l'identité de genre. Dans ce projet, elle est mesurée par le score LASSO — un indice continu construit à partir des pratiques culturelles.\n    → 0 = pôle féminin · 1 = pôle masculin\n  \n  \n    📏\n    La norme prescrite\n    Pour chaque groupe (hommes / femmes), il existe une identité \"attendue\". La norme, c'est simplement l'identité moyenne des membres du groupe.\n    → Norme femmes ≈ 0,30 · Norme hommes ≈ 0,65\n  \n  \n    📐\n    La déviation\n    C'est l'écart entre l'identité de l'individu et la norme de son groupe. Un homme avec un score LASSO de 0,15 dévie fortement. Une femme avec un score de 0,28 dévie peu.\n    → Δᵢ = |score_i − norme_groupe_i|"
+  },
+  {
+    "objectID": "theorie.html#une-illustration-visuelle",
+    "href": "theorie.html#une-illustration-visuelle",
+    "title": "La théorie",
+    "section": "Une illustration visuelle",
+    "text": "Une illustration visuelle\n\n  \n    \n      \n        \n        \n      \n    \n\n    \n    \n    Pôle féminin (0)\n    Pôle masculin (1)\n\n    \n    \n    Marc\n    ι̂ = 0,85\n    \n    \n    pratiques féminines ← coût !\n\n    \n    \n    Julie\n    ι̂ = 0,12\n    \n    \n    pratiques féminines → conforme ✓\n\n    \n    \n    Sam\n    ι̂ = 0,48\n\n    \n      \n        \n      \n    \n  \n\nMarc pratique des activités typiquement féminines malgré une position très masculine → coût identitaire élevé.\nJulie pratique des activités typiquement féminines depuis une position féminine → pas de coût.\nSam est au centre et pratique des activités neutres → coût minimal."
+  },
+  {
+    "objectID": "theorie.html#pourquoi-ce-coût-existe-t-il",
+    "href": "theorie.html#pourquoi-ce-coût-existe-t-il",
+    "title": "La théorie",
+    "section": "Pourquoi ce coût existe-t-il ?",
+    "text": "Pourquoi ce coût existe-t-il ?\nAkerlof & Kranton identifient trois sources :\n\n  \n    👁️ Le regard des autres\n    Pratiquer une activité \"atypique\" expose à des réactions sociales — moqueries, incompréhension, exclusion du groupe. Ce coût social est réel et documenté.\n  \n  \n    🪞 La dissonance interne\n    Même sans regard extérieur, pratiquer quelque chose qui ne \"correspond pas\" à qui on est peut créer un malaise intérieur — une dissonance entre l'identité et le comportement.\n  \n  \n    🏃 L'effort de justification\n    Les individus qui dévient de la norme dépensent de l'énergie à justifier leurs choix — à eux-mêmes et aux autres. Cet effort cognitif a lui aussi un coût."
+  },
+  {
+    "objectID": "theorie.html#ce-que-ce-projet-ajoute",
+    "href": "theorie.html#ce-que-ce-projet-ajoute",
+    "title": "La théorie",
+    "section": "Ce que ce projet ajoute",
+    "text": "Ce que ce projet ajoute\nLa théorie d’Akerlof & Kranton est bien établie. Ce qui manquait, c’est un test empirique direct avec des données observationnelles sur les pratiques culturelles. Pour ça, il faut :\n\nUne mesure continue de l’identité ✅ (projets précédents)\nDes normes quantifiées pratique par pratique ✅ (les β_k du projet précédent)\nUn indice de déviation individuel ← c’est la page suivante\nDes proxies de bien-être dans les données ✅ (santé perçue, manque de temps)\n\n→ Comment on construit l’indice de déviation"
+  },
+  {
+    "objectID": "resultats.html#ce-quon-attendait-et-ce-quon-trouve",
+    "href": "resultats.html#ce-quon-attendait-et-ce-quon-trouve",
+    "title": "Résultats",
+    "section": "",
+    "text": "La théorie d’Akerlof & Kranton prédit clairement : dévier des normes de son groupe coûte de l’utilité. Traduit en termes empiriques : plus l’indice de déviation est élevé, moins bonne devrait être la santé perçue.\n\n  \n    Ce que prédit la théorie\n    ↓\n    Plus de déviation → moins bonne santé\n    Coefficient attendu : négatif\n  \n  VS\n  \n    Ce qu'on trouve\n    ↑\n    Plus de déviation → meilleure santé\n    Coefficient estimé : positif et significatif"
+  },
+  {
+    "objectID": "resultats.html#le-résultat-principal-santé-perçue",
+    "href": "resultats.html#le-résultat-principal-santé-perçue",
+    "title": "Résultats",
+    "section": "Le résultat principal : santé perçue",
+    "text": "Le résultat principal : santé perçue\n\n\n\n\n\nSanté perçue selon l’indice de déviation LASSO (toutes choses égales par ailleurs). Échelle : 5 = très bonne, 1 = très mauvaise. La relation est positive — l’inverse de la prédiction théorique.\n\n\n\n\n\n  \n+0.075 ns\n  \n  \n    Effet de la déviation sur la santé perçue (échelle 1–5)\n    Positif et significatif — l'inverse de la prédiction théorique\n    \n      Interprétation : une unité de déviation supplémentaire est associée à une meilleure santé perçue,\n      toutes choses égales par ailleurs."
+  },
+  {
+    "objectID": "resultats.html#le-résultat-secondaire-manque-de-temps-libre",
+    "href": "resultats.html#le-résultat-secondaire-manque-de-temps-libre",
+    "title": "Résultats",
+    "section": "Le résultat secondaire : manque de temps libre",
+    "text": "Le résultat secondaire : manque de temps libre\n\n\n\n\n\nProbabilité de manquer souvent de temps libre selon l’indice de déviation LASSO.\n\n\n\n\n\nCall:\nlm(formula = sante_inv ~ dev_identite + age_c + revenu + situation + \n    diplome, data = filter(epc, !is.na(sante_inv), !is.na(dev_identite), \n    !is.na(age_c), !is.na(revenu), !is.na(situation), !is.na(diplome)))\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-3.5665 -0.5001  0.0673  0.6146  2.3056 \n\nCoefficients:\n                   Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)        3.394719   0.038971  87.110  &lt; 2e-16 ***\ndev_identite      -0.035057   0.130104  -0.269 0.787586    \nage_c             -0.241849   0.013134 -18.414  &lt; 2e-16 ***\nrevenu             0.061413   0.004397  13.968  &lt; 2e-16 ***\nsituationchomage  -0.164299   0.042480  -3.868 0.000111 ***\nsituationetudes    0.182411   0.045022   4.052 5.13e-05 ***\nsituationinactif  -0.677791   0.041775 -16.225  &lt; 2e-16 ***\nsituationretraite -0.044713   0.032560  -1.373 0.169718    \ndiplome            0.026110   0.003553   7.349 2.19e-13 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.8348 on 8034 degrees of freedom\nMultiple R-squared:  0.2233,    Adjusted R-squared:  0.2225 \nF-statistic: 288.7 on 8 and 8034 DF,  p-value: &lt; 2.2e-16\n\n\n\nCall:\nlm(formula = temps_satisf ~ dev_identite + age_c + revenu + situation + \n    diplome, data = filter(epc, !is.na(temps_satisf), !is.na(dev_identite), \n    !is.na(age_c), !is.na(revenu), !is.na(situation), !is.na(diplome)))\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-1.74027 -0.57822  0.02846  0.55968  1.65007 \n\nCoefficients:\n                   Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)        1.914008   0.034969  54.734  &lt; 2e-16 ***\ndev_identite       0.373172   0.116723   3.197 0.001394 ** \nage_c             -0.042329   0.011770  -3.596 0.000325 ***\nrevenu             0.034454   0.003946   8.733  &lt; 2e-16 ***\nsituationchomage  -0.456945   0.038119 -11.987  &lt; 2e-16 ***\nsituationetudes   -0.225940   0.040424  -5.589 2.35e-08 ***\nsituationinactif  -0.535125   0.037461 -14.285  &lt; 2e-16 ***\nsituationretraite -0.618948   0.029173 -21.216  &lt; 2e-16 ***\ndiplome            0.024953   0.003187   7.828 5.57e-15 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 0.7498 on 8046 degrees of freedom\nMultiple R-squared:  0.214, Adjusted R-squared:  0.2132 \nF-statistic: 273.8 on 8 and 8046 DF,  p-value: &lt; 2.2e-16\n\n\n\n  \n+0.253 ***\n  \n  \n    Effet de la déviation sur le manque de temps libre (0/1)\n    \nSignificatif — à interpréter avec prudence"
+  },
+  {
+    "objectID": "resultats.html#pourquoi-ce-résultat-ninvalide-pas-la-théorie",
+    "href": "resultats.html#pourquoi-ce-résultat-ninvalide-pas-la-théorie",
+    "title": "Résultats",
+    "section": "Pourquoi ce résultat n’invalide pas la théorie",
+    "text": "Pourquoi ce résultat n’invalide pas la théorie\n\n\n  \n    💡 L'hypothèse la plus plausible : effet de capital culturel\n    \n      Les individus qui pratiquent des activités atypiques pour leur identité \n      sont probablement des personnes plus ouvertes, plus actives, \n      plus riches culturellement. Cette diversité des pratiques \n      est bien connue pour être associée à une meilleure santé perçue — \n      indépendamment de leur conformité aux normes identitaires.\n    \n    \n      En d'autres termes : on mesure un effet de richesse des pratiques, \n      pas un coût identitaire.\n    \n  \n\n  \n    🎭 Les loisirs ≠ le travail\n    \n      Akerlof & Kranton (2000) développent leur théorie principalement \n      pour les choix scolaires et professionnels — des domaines où \n      la déviation est très visible socialement et a des conséquences économiques.\n      Les pratiques culturelles de loisir sont peut-être un domaine \n      où dévier est moins coûteux, voire valorisé \n      (originalité, ouverture d'esprit).\n    \n  \n\n  \n    📏 Un problème de mesure\n    \n      Pour tester vraiment le coût de déviation, il faudrait une mesure \n      d'identité indépendante des pratiques elles-mêmes. \n      Ici, même avec le LASSO, l'identité est inférée des pratiques — \n      ce qui rend difficile la séparation entre \"identité\" et \"richesse culturelle\"."
+  },
+  {
+    "objectID": "resultats.html#ce-que-ce-résultat-apporte-malgré-tout",
+    "href": "resultats.html#ce-que-ce-résultat-apporte-malgré-tout",
+    "title": "Résultats",
+    "section": "Ce que ce résultat apporte malgré tout",
+    "text": "Ce que ce résultat apporte malgré tout\n\n\n\n\n\n\nNoteUn résultat négatif est un résultat\n\n\n\nMontrer que le coût de déviation prédit par Akerlof & Kranton ne se manifeste pas dans les pratiques culturelles de loisir est en soi une contribution. Cela suggère que la théorie s’applique surtout aux domaines où la déviation a des conséquences sociales et économiques directes — pas aux loisirs privés.\nCe résultat ouvre la question : dans quels domaines le coût de déviation est-il le plus fort ? Le marché du travail, les choix d’orientation, les relations sociales sont des candidats plus naturels que les pratiques culturelles.\n\n\n→ Limites et perspectives"
+  },
+  {
+    "objectID": "deviation.html#pourquoi-cette-formule-et-pas-une-autre",
+    "href": "deviation.html#pourquoi-cette-formule-et-pas-une-autre",
+    "title": "L’indice de déviation",
+    "section": "Pourquoi cette formule — et pas une autre",
+    "text": "Pourquoi cette formule — et pas une autre\n\n\n  \n    ✓ Ce qu'elle capte\n    \n      L'écart réel entre identité individuelle et norme du groupe\n      Symétrique : dévier vers le masculin ou vers le féminin coûte autant\n      Non circulaire : le sexe déclaré est externe aux pratiques\n      Simple à interpréter : une unité = un écart d'un point sur l'échelle [0,1]\n    \n  \n\n  \n    ✗ Ce qu'elle ne capte pas\n    \n      La direction de la déviation (vers le féminin ou le masculin)\n      Les pratiques spécifiques — c'est une déviation identitaire globale\n      Le regard des autres — qui peut varier selon le contexte social"
+  },
+  {
+    "objectID": "deviation.html#calcul-des-normes",
+    "href": "deviation.html#calcul-des-normes",
+    "title": "L’indice de déviation",
+    "section": "Calcul des normes",
+    "text": "Calcul des normes\nLa norme de chaque groupe est calculée empiriquement sur l’ensemble de l’échantillon :\n\nlibrary(tidyverse)\nepc &lt;- readRDS(\"epc.rds\")\nepc$lasso_inv &lt;- 1 - epc$score_LASSO_norm\n\n# Norme = score LASSO moyen par groupe de sexe\nnormes &lt;- epc |&gt;\n  group_by(Sex) |&gt;\n  summarise(\n    norme_identite = round(mean(lasso_inv, na.rm=TRUE), 3),\n    n              = n()\n  )\n\nknitr::kable(normes,\n             col.names = c(\"Groupe\", \"Identité moyenne (norme)\", \"N\"),\n             caption = \"Norme identitaire par groupe de sexe\")\n\n\nNorme identitaire par groupe de sexe\n\n\nGroupe\nIdentité moyenne (norme)\nN\n\n\n\n\nMen\n0.599\n4162\n\n\nWomen\n0.422\n5072"
+  },
+  {
+    "objectID": "deviation.html#distribution-de-la-déviation",
+    "href": "deviation.html#distribution-de-la-déviation",
+    "title": "L’indice de déviation",
+    "section": "Distribution de la déviation",
+    "text": "Distribution de la déviation\n\n\n\n\n\nDistribution de l’indice de déviation identitaire selon le groupe de sexe. Les hommes et les femmes peuvent tous deux s’écarter de leur norme respective.\n\n\n\n\n\n\n\n\n\n\nNoteCe qu’on observe\n\n\n\nLa distribution est concentrée près de zéro — la plupart des individus sont proches de la norme de leur groupe. Mais une minorité s’en écarte substantiellement, dans les deux groupes."
+  },
+  {
+    "objectID": "deviation.html#quelques-individus-typiques",
+    "href": "deviation.html#quelques-individus-typiques",
+    "title": "L’indice de déviation",
+    "section": "Quelques individus typiques",
+    "text": "Quelques individus typiques\n\n\n\n\n\nPosition de trois profils-types sur le spectre identitaire, par rapport aux normes de leur groupe.\n\n\n\n\n→ Les résultats"
+  },
+  {
+    "objectID": "index.html#dévier-des-normes-de-son-groupe-coûte-t-il-quelque-chose",
+    "href": "index.html#dévier-des-normes-de-son-groupe-coûte-t-il-quelque-chose",
+    "title": "Le coût d’être soi-même ?",
+    "section": "",
+    "text": "C’est la prédiction centrale de la théorie économique de l’identité. Ce projet la teste systématiquement — sur quatre outcomes, quatre profils, deux mesures d’identité. La réponse, dans le domaine des loisirs culturels, est non."
+  },
+  {
+    "objectID": "index.html#lhistoire-en-quatre-temps",
+    "href": "index.html#lhistoire-en-quatre-temps",
+    "title": "Le coût d’être soi-même ?",
+    "section": "L’histoire en quatre temps",
+    "text": "L’histoire en quatre temps\n\n\n  \n    01\n    \n      La théorie\n      Akerlof & Kranton (2000) : dévier des normes identitaires de son groupe diminue l'utilité. Testable empiriquement ?\n      → La théorie expliquée\n    \n  \n\n  →\n\n  \n    02\n    \n      La mesure\n      On construit un indice de déviation non circulaire : l'écart entre l'identité de genre de i et la norme de son groupe de sexe.\n      → L'indice expliqué\n    \n  \n\n  →\n\n  \n    03\n    \n      16 tests\n      4 profils × 4 outcomes × 2 mesures d'identité. Résultat : 15 effets nuls, 1 effet marginal non robuste.\n      → Les résultats\n    \n  \n\n  →\n\n  \n    04\n    \n      Ce que ça dit\n      Dans les loisirs privés, la déviation identitaire ne coûte rien. Ce résultat délimite le domaine de validité de la théorie.\n      → Discussion"
+  },
+  {
+    "objectID": "index.html#le-résultat-surprenant-en-un-coup-dœil",
+    "href": "index.html#le-résultat-surprenant-en-un-coup-dœil",
+    "title": "Le coût d’être soi-même ?",
+    "section": "Le résultat surprenant en un coup d’œil",
+    "text": "Le résultat surprenant en un coup d’œil\n\n  \n    Ce que prédit la théorie\n    ↓\n    Plus de déviation identitaire→ moins de bien-être\n  \n  VS\n  \n    Ce qu'on trouve\n    ↑\n    Plus de déviation identitaire→ plus de satisfaction dans les loisirs"
+  },
+  {
+    "objectID": "limites.html#un-résultat-contre-intuitif-mais-cohérent",
+    "href": "limites.html#un-résultat-contre-intuitif-mais-cohérent",
+    "title": "Discussion",
+    "section": "",
+    "text": "La théorie d’Akerlof & Kranton prédit un coût de la déviation identitaire. On trouve un bénéfice sur la satisfaction en loisirs, et aucun effet sur la santé. Comment interpréter ça ?"
+  },
+  {
+    "objectID": "limites.html#trois-lectures-possibles",
+    "href": "limites.html#trois-lectures-possibles",
+    "title": "Discussion",
+    "section": "Trois lectures possibles",
+    "text": "Trois lectures possibles\n\n\n  \n    01\n    Les loisirs sont un espace d'émancipation\n    \n      Akerlof & Kranton développent leur théorie pour les choix scolaires et professionnels — \n      des domaines où la déviation est visible, sanctionnée économiquement \n      et difficile à éviter. Les loisirs culturels sont différents : ils sont privés, \n      choisis, et socialement tolérés dans leur diversité.\n    \n    \n      Les individus qui construisent une identité atypique pour leur groupe ont \n      probablement choisi activement cette position — et ils \n      en tirent une satisfaction accrue dans leurs loisirs, précisément parce qu'ils \n      pratiquent ce qui leur plaît plutôt que ce qu'on attend d'eux.\n    \n    → Compatible avec la littérature sur l'autonomie et le bien-être (Deci & Ryan, 1985)\n  \n\n  \n    02\n    La déviation choisie vs subie\n    \n      Akerlof & Kranton parlent du coût d'une déviation subie \n      — l'individu ne peut pas pratiquer ce que sa norme prescrit, \n      ou est contraint de faire ce qu'elle proscrit.\n    \n    \n      Ici, la déviation est choisie : personne n'oblige Marc à tricoter. \n      Un individu qui choisit librement une identité atypique peut en tirer \n      une satisfaction que la théorie standard ne capture pas.\n    \n  \n\n  \n    03\n    Un problème de proxy\n    \n      La satisfaction en temps libre et la santé perçue sont des mesures \n      imparfaites du bien-être identitaire. Le coût de déviation \n      d'Akerlof & Kranton se manifeste peut-être dans l'anxiété sociale, \n      la confiance en soi, ou les interactions quotidiennes — \n      pas dans des questions de bien-être global."
+  },
+  {
+    "objectID": "limites.html#ce-que-ça-change-pour-la-théorie",
+    "href": "limites.html#ce-que-ça-change-pour-la-théorie",
+    "title": "Discussion",
+    "section": "Ce que ça change pour la théorie",
+    "text": "Ce que ça change pour la théorie\n\n\n  \n    Théorie d'Akerlof & Kranton\n    Déviation → coût d'utilité\n    Testé dans : choix scolaires, marché du travail\n  \n\n  →\n\n  \n    Ce projet ajoute\n    Dans les loisirs culturels, la déviation identitaire choisie est associée \n    à une meilleure satisfaction. Le coût prédit par la théorie \n    ne se manifeste pas dans ce domaine.\n    \n    Hypothèse : la théorie s'applique surtout aux domaines à forte pression normative externe."
+  },
+  {
+    "objectID": "theorie.html#lidée-fondatrice-lidentité-entre-dans-lutilité",
+    "href": "theorie.html#lidée-fondatrice-lidentité-entre-dans-lutilité",
+    "title": "La théorie",
+    "section": "",
+    "text": "En 2000, Akerlof et Kranton publient un article qui bouscule l’économie standard. Leur argument : les individus ne maximisent pas seulement leurs gains matériels — ils maximisent aussi leur cohérence identitaire. Agir en accord avec les normes de son groupe procure une satisfaction. Dévier de ces normes génère un coût.\n\n  \n    Utilité = gains des actions\n            − coût de déviation par rapport à la norme\n  \n  \n    Ce coût n'est pas financier. C'est un malaise, une dissonance entre qui on est \n    et ce qu'on fait — ou entre qui on est et ce que les autres attendent de nous."
+  },
+  {
+    "objectID": "theorie.html#pourquoi-cette-définition-de-la-déviation",
+    "href": "theorie.html#pourquoi-cette-définition-de-la-déviation",
+    "title": "La théorie",
+    "section": "Pourquoi cette définition de la déviation ?",
+    "text": "Pourquoi cette définition de la déviation ?\nC’est un choix crucial — et il n’est pas évident. On aurait pu définir la déviation autrement :\n\n\n  \n    ✗ Rejeté\n    Déviation dans les pratiques\n    Mesurer si les pratiques de i sont atypiques pour sa position identitaire.\n    Problème : l'identité est construite à partir des pratiques — c'est circulaire. On ne peut pas dévier de quelque chose qu'on a soi-même défini.\n  \n\n  \n    ✓ Retenu\n    Déviation dans l'identité\n    Mesurer si l'identité de i s'écarte de la norme de son groupe de sexe.\n    Avantage : le sexe déclaré est externe aux pratiques et à l'identité LASSO. La déviation mesure un vrai écart entre qui on est et ce que son groupe prescrit d'être."
+  },
+  {
+    "objectID": "theorie.html#une-illustration-concrète",
+    "href": "theorie.html#une-illustration-concrète",
+    "title": "La théorie",
+    "section": "Une illustration concrète",
+    "text": "Une illustration concrète\n\n  \n    \n      \n        \n        \n      \n    \n\n    \n    \n    0 — Pôle féminin\n    1 — Pôle masculin\n\n    \n    \n    Norme femmes\n    ≈ 0,30\n\n    \n    \n    Norme hommes\n    ≈ 0,65\n\n    \n    \n    Marc\n    homme, score=0,15\n    \n    \n    Δ = 0,50 — forte déviation\n\n    \n    \n    Julie\n    femme, score=0,28\n    \n    \n    Δ=0,02\n\n    \n    \n    Jordan\n    homme, score=0,82\n    \n    Δ=0,17\n  \n\nMarc (homme, score LASSO = 0,15) s’écarte fortement de la norme masculine (0,65) → forte déviation. Julie (femme, score = 0,28) est proche de la norme féminine (0,30) → faible déviation. Jordan (homme, score = 0,82) est proche de la norme masculine → faible déviation."
+  },
+  {
+    "objectID": "theorie.html#la-prédiction-testable",
+    "href": "theorie.html#la-prédiction-testable",
+    "title": "La théorie",
+    "section": "La prédiction testable",
+    "text": "La prédiction testable\nSi la théorie est juste, Marc — qui dévie le plus — devrait avoir un bien-être plus faible que Julie et Jordan, toutes choses égales par ailleurs (âge, revenu, diplôme, situation).\n\n\n\n\n\n\nTipSpoiler\n\n\n\nCe n’est pas ce qu’on trouve. La page suivante explique comment on mesure la déviation, et les résultats arrivent ensuite.\n\n\n→ Comment on mesure la déviation"
+  },
+  {
+    "objectID": "resultats.html#la-question",
+    "href": "resultats.html#la-question",
+    "title": "Résultats",
+    "section": "",
+    "text": "La théorie d’Akerlof & Kranton prédit que dévier de la norme identitaire de son groupe coûte de l’utilité. On teste cette prédiction sur six outcomes : deux de bien-être individuel (santé perçue, satisfaction en temps libre) et deux de vie sociale (fréquence des sorties, fréquence de recevoir chez soi). Chaque modèle est estimé avec les deux mesures d’identité (ACM et LASSO) pour tester la robustesse."
+  },
+  {
+    "objectID": "resultats.html#vue-densemble-où-le-coût-apparaît-il",
+    "href": "resultats.html#vue-densemble-où-le-coût-apparaît-il",
+    "title": "Résultats",
+    "section": "Vue d’ensemble : où le coût apparaît-il ?",
+    "text": "Vue d’ensemble : où le coût apparaît-il ?\n\n\n\n\n\nCoefficients de l’indice de déviation sur six outcomes (avec contrôles socio-démographiques et nombre de pratiques). Les barres colorées sont significatives au seuil 5 %."
+  },
+  {
+    "objectID": "resultats.html#résultat-1-bien-être-individuel-effet-nul",
+    "href": "resultats.html#résultat-1-bien-être-individuel-effet-nul",
+    "title": "Résultats",
+    "section": "Résultat 1 — Bien-être individuel : effet nul",
+    "text": "Résultat 1 — Bien-être individuel : effet nul\n\n  ➖\n  \n    Nul\n    \n      Sur la santé perçue et la satisfaction en temps libre,\n      la déviation identitaire n'a aucun effet significatif — ni avec l'ACM, ni avec le LASSO,\n      une fois le nombre de pratiques contrôlé.\n      \n        Ce qui explique la satisfaction en temps libre, c'est combien on pratique,\n        pas à quel point on dévie de la norme."
+  },
+  {
+    "objectID": "resultats.html#résultat-2-vie-sociale-un-signal-sur-la-sphère-intime",
+    "href": "resultats.html#résultat-2-vie-sociale-un-signal-sur-la-sphère-intime",
+    "title": "Résultats",
+    "section": "Résultat 2 — Vie sociale : un signal sur la sphère intime",
+    "text": "Résultat 2 — Vie sociale : un signal sur la sphère intime\n\n\n\n\n\nFréquence de recevoir chez soi selon la déviation identitaire LASSO (toutes choses égales par ailleurs). Échelle : 6 = plusieurs fois par semaine, 1 = jamais.\n\n\n\n\n\n  ↓\n  \n    \n-0.514 *\n    \n    \n      Effet de la déviation LASSO sur la fréquence de recevoir chez soi\n      p = \n0.023 — significatif au seuil 5%\n      \n      \n        Les individus qui dévient le plus de la norme de leur groupe reçoivent\n        moins souvent chez eux — même à nombre de pratiques égal."
+  },
+  {
+    "objectID": "resultats.html#tableau-de-synthèse-complet",
+    "href": "resultats.html#tableau-de-synthèse-complet",
+    "title": "Résultats",
+    "section": "Tableau de synthèse complet",
+    "text": "Tableau de synthèse complet\n\n\n\n\nTable 1: Effet de la déviation identitaire sur six outcomes. Tous les modèles contrôlent pour l’âge, le revenu, le diplôme, la situation d’activité, la position identitaire et le nombre de pratiques.\n\n\n\n\n\n\nOutcome\nIndice\nCoefficient\np-valeur\n\n\n\n\n\nSanté perçue\nACM\n+0.0835\n0.583\nns\n\n\nSanté perçue\nLASSO\n-0.1184\n0.384\nns\n\n\nSatisfaction temps libre\nACM\n-0.0106\n0.938\nns\n\n\nSatisfaction temps libre\nLASSO\n+0.0508\n0.675\nns\n\n\nFréquence sorties\nACM\n+0.2169\n0.393\nns\n\n\nFréquence sorties\nLASSO\n+0.3143\n0.167\nns\n\n\nFréquence recevoir\nACM\n-0.2938\n0.246\nns\n\n\nFréquence recevoir\nLASSO\n-0.5144\n0.023\n*\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportantLe résultat en une phrase\n\n\n\nLa déviation identitaire n’a pas de coût psychologique (santé, satisfaction), mais est associée à une vie sociale intime plus réduite — spécifiquement recevoir chez soi, là où la pression normative du groupe s’exerce le plus directement.\n\n\n→ Discussion"
+  },
+  {
+    "objectID": "index.html#le-résultat-en-un-graphique",
+    "href": "index.html#le-résultat-en-un-graphique",
+    "title": "Le coût d’être soi-même ?",
+    "section": "Le résultat en un graphique",
+    "text": "Le résultat en un graphique\n\n  \n    Ce que prédit la théorie\n    ↓\n    Plus de déviation identitaire→ moins de bien-être\n  \n  VS\n  \n    Ce qu'on trouve (16 tests)\n    —\n    Aucun effet significatifdans les loisirs culturels"
+  },
+  {
+    "objectID": "index.html#ce-que-ce-résultat-apporte",
+    "href": "index.html#ce-que-ce-résultat-apporte",
+    "title": "Le coût d’être soi-même ?",
+    "section": "Ce que ce résultat apporte",
+    "text": "Ce que ce résultat apporte\nUn résultat nul bien documenté est une contribution scientifique. Il ne réfute pas la théorie d’Akerlof & Kranton — il la précise : le coût de déviation identitaire ne se manifeste pas dans les loisirs culturels privés. Ce domaine est un espace de relative liberté identitaire, où la déviation est choisie et peu sanctionnée.\n\n\n\n\n\n\nCe site est le troisième volet d’un programme de recherche sur l’identité de genre et les pratiques culturelles.\n\nMesure de l’identité — construction des indices ACM et LASSO\nQui tricote, qui pêche ? — indice continu de ségrégation β_k\nCe site — test empirique du coût de déviation\n\n\n\n\n\n\n\nPage\nPour qui ?\nDurée\n\n\n\n\nLa théorie\nTout le monde\n~5 min\n\n\nL’indice de déviation\nIntéressé·es par la méthode\n~8 min\n\n\nRésultats\nTout le monde\n~6 min\n\n\nDiscussion\nChercheur·ses\n~5 min"
+  },
+  {
+    "objectID": "deviation.html#de-la-distance-à-la-direction",
+    "href": "deviation.html#de-la-distance-à-la-direction",
+    "title": "L’indice de déviation",
+    "section": "",
+    "text": "On pourrait mesurer la déviation simplement comme une distance absolue : combien Marc s’éloigne-t-il de la norme de son groupe, peu importe dans quel sens ? C’est l’indice \\(\\Delta_i\\).\nMais la théorie d’Akerlof & Kranton suggère que la direction de la déviation compte : s’éloigner vers le pôle féminin quand on est un homme n’est peut-être pas la même chose que s’éloigner vers le pôle masculin. Ce projet teste les deux."
+  },
+  {
+    "objectID": "deviation.html#indice-1-la-distance-absolue",
+    "href": "deviation.html#indice-1-la-distance-absolue",
+    "title": "L’indice de déviation",
+    "section": "Indice 1 — La distance absolue",
+    "text": "Indice 1 — La distance absolue\n\\[\\Delta_i = |\\hat{\\iota}_i - \\bar{\\iota}_{g_i}|\\]\n\n\\(\\hat{\\iota}_i\\) = score LASSO de \\(i\\) (0 = féminin, 1 = masculin)\n\\(\\bar{\\iota}_{g_i}\\) = score LASSO moyen de son groupe de sexe\n\nInterprétation : combien \\(i\\) s’écarte de la norme de son groupe, sans tenir compte de la direction. Marc (homme, score 0,15) et Jordan bis (homme, score 0,95) ont la même distance à la norme masculine — mais leurs profils sont opposés."
+  },
+  {
+    "objectID": "deviation.html#indice-2-la-déviation-signée",
+    "href": "deviation.html#indice-2-la-déviation-signée",
+    "title": "L’indice de déviation",
+    "section": "Indice 2 — La déviation signée",
+    "text": "Indice 2 — La déviation signée\n\\[\\delta_i = \\hat{\\iota}_i - \\bar{\\iota}_{g_i}\\]\nInterprétation : - \\(\\delta_i &lt; 0\\) → identité en dessous de la norme du groupe (un homme plus féminin que la moyenne des hommes, ou une femme plus féminine que la moyenne des femmes) - \\(\\delta_i &gt; 0\\) → identité au-dessus de la norme du groupe (un homme plus masculin que la moyenne, ou une femme plus masculine que la moyenne)\nCela produit quatre profils distincts :\n\n  \n    \n      \n        \n        \n      \n      \n        \n      \n      \n        \n      \n    \n\n    \n    \n    0 — Pôle féminin\n    1 — Pôle masculin\n\n    \n    \n    Norme femmes ≈ 0,42\n\n    \n    \n    Norme hommes ≈ 0,60\n\n    \n    \n    \n    \n    Femme conforme\n    δ &lt; 0 : plus féminine\n    que la norme féminine\n\n    \n    \n    \n    Femme atypique\n    δ &gt; 0 : plus masculine\n    que la norme féminine\n\n    \n    \n    \n    Homme atypique\n    δ &lt; 0 : plus féminin\n    que la norme masculine\n\n    \n    \n    \n    Homme conforme\n    δ &gt; 0 : plus masculin\n    que la norme masculine\n\n    \n    \n    Femme\n    \n    Homme\n    \n    Contour pointillé = atypique\n    \n    Flèche = direction vers la norme"
+  },
+  {
+    "objectID": "deviation.html#les-quatre-profils-en-clair",
+    "href": "deviation.html#les-quatre-profils-en-clair",
+    "title": "L’indice de déviation",
+    "section": "Les quatre profils en clair",
+    "text": "Les quatre profils en clair\n\n  \n    Femme conforme\n    δ &lt; 0 — identité plus féminine que la norme féminine\n    Renforce sa position dans la norme prescrite\n  \n  \n    Femme atypique\n    δ &gt; 0 — identité plus masculine que la norme féminine\n    S'écarte vers le pôle opposé à sa norme\n  \n  \n    Homme atypique\n    δ &lt; 0 — identité plus féminine que la norme masculine\n    S'écarte vers le pôle opposé à sa norme\n  \n  \n    Homme conforme\n    δ &gt; 0 — identité plus masculine que la norme masculine\n    Renforce sa position dans la norme prescrite\n  \n\n\n\n\n\n\n\nNotePourquoi distinguer les deux indices ?\n\n\n\n\\(\\Delta_i\\) (distance absolue) teste si l’intensité de la déviation importe, indépendamment de sa direction. \\(\\delta_i\\) (déviation signée) teste si la direction importe — et permet de comparer les conformes aux atypiques dans chaque groupe."
+  },
+  {
+    "objectID": "deviation.html#les-normes-empiriques",
+    "href": "deviation.html#les-normes-empiriques",
+    "title": "L’indice de déviation",
+    "section": "Les normes empiriques",
+    "text": "Les normes empiriques\n\nlibrary(tidyverse)\nepc &lt;- readRDS(\"epc.rds\")\nepc$lasso_inv &lt;- 1 - epc$score_LASSO_norm\n\nnormes &lt;- epc |&gt;\n  group_by(Sex) |&gt;\n  summarise(\n    `Norme (score moyen)` = round(mean(lasso_inv, na.rm=TRUE), 3),\n    `Écart-type`          = round(sd(lasso_inv,   na.rm=TRUE), 3),\n    N                     = n()\n  )\n\nknitr::kable(normes, caption=\"Norme identitaire empirique par groupe de sexe\")\n\n\nNorme identitaire empirique par groupe de sexe\n\n\nSex\nNorme (score moyen)\nÉcart-type\nN\n\n\n\n\nMen\n0.599\n0.098\n4162\n\n\nWomen\n0.422\n0.132\n5072"
+  },
+  {
+    "objectID": "deviation.html#distribution-des-quatre-profils",
+    "href": "deviation.html#distribution-des-quatre-profils",
+    "title": "L’indice de déviation",
+    "section": "Distribution des quatre profils",
+    "text": "Distribution des quatre profils\n\n\n\n\n\nDistribution de la déviation signée δ dans les deux groupes de sexe. Les valeurs négatives indiquent une identité en dessous de la norme du groupe ; les valeurs positives au-dessus.\n\n\n\n\n→ Les résultats"
+  },
+  {
+    "objectID": "limites.html#ce-quon-a-trouvé",
+    "href": "limites.html#ce-quon-a-trouvé",
+    "title": "Discussion",
+    "section": "",
+    "text": "La théorie d’Akerlof & Kranton prédit que dévier des normes de son groupe coûte de l’utilité. On a testé cette prédiction de manière systématique : deux mesures d’identité, quatre outcomes de bien-être et de vie sociale, quatre profils distinguant le sexe et la direction de la déviation — soit 16 modèles avec contrôles socio-démographiques complets.\nRésultat : effet nul généralisé."
+  },
+  {
+    "objectID": "limites.html#pourquoi-un-résultat-nul-est-informatif",
+    "href": "limites.html#pourquoi-un-résultat-nul-est-informatif",
+    "title": "Discussion",
+    "section": "Pourquoi un résultat nul est informatif",
+    "text": "Pourquoi un résultat nul est informatif\n\n  \n    Un résultat nul bien documenté délimite le domaine de validité d'une théorie. \n    Il ne réfute pas Akerlof & Kranton — il précise où leur théorie s'applique \n    et où elle ne s'applique pas.\n  \n  \n    Trouver que le coût de déviation est nul dans les loisirs culturels est \n    une information scientifique à part entière : elle suggère que ce coût \n    est domaine-spécifique, et que les loisirs privés sont \n    un espace de relative liberté identitaire."
+  },
+  {
+    "objectID": "limites.html#trois-lectures-du-résultat-nul",
+    "href": "limites.html#trois-lectures-du-résultat-nul",
+    "title": "Discussion",
+    "section": "Trois lectures du résultat nul",
+    "text": "Trois lectures du résultat nul\n\n\n  \n    01\n    Les loisirs sont un espace de faible pression normative\n    \n      La théorie d'Akerlof & Kranton a été développée et testée principalement \n      dans des domaines à forte visibilité sociale : choix scolaires, marché du travail, \n      appartenance religieuse. Dans ces domaines, la déviation est publique, \n      durable et économiquement sanctionnée.\n    \n    \n      Les pratiques culturelles de loisir sont différentes : elles sont privées, \n      choisies librement, et socialement tolérées dans leur diversité. \n      Tricoter ou jouer aux jeux vidéo ne vous coûte pas votre emploi \n      ni votre statut social.\n    \n    → Compatible avec Hesmondhalgh & Baker (2015) sur la tolérance normative dans les loisirs\n  \n\n  \n    02\n    La déviation dans les loisirs est choisie\n    \n      Akerlof & Kranton parlent d'un coût subi — l'individu ne peut pas \n      agir selon sa norme, ou est contraint d'agir contre elle. \n      Ici, la déviation est choisie : personne n'oblige \n      un homme à tricoter. Une déviation librement choisie peut être \n      source de satisfaction plutôt que de coût.\n    \n  \n\n  \n    03\n    Nos proxies mesurent mal le coût identitaire\n    \n      La santé perçue, la satisfaction en temps libre et la fréquence \n      des interactions sociales sont des mesures globales de bien-être. \n      Le coût identitaire d'Akerlof & Kranton est peut-être trop subtil \n      pour se manifester sur ces indicateurs larges — il se manifesterait \n      plutôt dans l'anxiété situationnelle, le sentiment de jugement, \n      ou la confiance en soi."
+  },
+  {
+    "objectID": "limites.html#ce-que-les-données-révèlent-malgré-tout",
+    "href": "limites.html#ce-que-les-données-révèlent-malgré-tout",
+    "title": "Discussion",
+    "section": "Ce que les données révèlent malgré tout",
+    "text": "Ce que les données révèlent malgré tout\nMême si l’hypothèse principale est rejetée, les modèles contiennent des résultats intéressants sur les déterminants du bien-être :\n\n\n  \n    📚\n    La richesse culturelle protège\n    Le nombre de pratiques est systématiquement positif \n    sur tous les outcomes dans tous les modèles (p &lt; 0,001). \n    Pratiquer plus d'activités culturelles est associé à une meilleure santé, \n    plus de satisfaction et une vie sociale plus riche — indépendamment \n    de leur conformité aux normes identitaires.\n  \n\n  \n    💑\n    Le statut conjugal structure la vie sociale\n    Vivre en couple est fortement associé à recevoir plus souvent chez soi \n    (coefficient ≈ +0,21, p &lt; 0,001). C'était le principal confondant \n    dans nos modèles sur la sphère intime — et il explique pourquoi \n    l'effet de la déviation disparaît une fois ce contrôle ajouté.\n  \n\n  \n    📉\n    L'inactivité pénalise fortement\n    Les individus inactifs (invalidité, autre inactivité) ont une santé \n    perçue et une vie sociale significativement plus faibles — \n    un résultat attendu mais qui souligne l'importance des contrôles \n    socio-économiques dans ce type d'analyse."
+  },
+  {
+    "objectID": "resultats.html#la-stratégie-de-test",
+    "href": "resultats.html#la-stratégie-de-test",
+    "title": "Résultats",
+    "section": "",
+    "text": "On teste si la déviation identitaire affecte le bien-être selon quatre profils distincts — en distinguant non seulement le sexe, mais aussi la direction de la déviation :\n\n  \n    \n    Score LASSO inférieur à la norme masculine\n    Identité plus féminine que la moyenne des hommes\n  \n  \n    \n    Score LASSO supérieur à la norme masculine\n    Identité plus masculine que la moyenne des hommes\n  \n  \n    \n    Score LASSO inférieur à la norme féminine\n    Identité plus féminine que la moyenne des femmes\n  \n  \n    \n    Score LASSO supérieur à la norme féminine\n    Identité plus masculine que la moyenne des femmes\n  \n\nPour chacun des quatre profils, on estime l’effet de la déviation sur quatre outcomes : santé perçue, satisfaction en temps libre, fréquence des sorties, fréquence de recevoir chez soi. Soit 16 modèles au total, tous contrôlés pour l’âge, le revenu, le diplôme, la situation d’activité et le statut conjugal."
+  },
+  {
+    "objectID": "resultats.html#les-16-résultats",
+    "href": "resultats.html#les-16-résultats",
+    "title": "Résultats",
+    "section": "Les 16 résultats",
+    "text": "Les 16 résultats\n\n\n\n\n\nCoefficients de la déviation identitaire sur quatre outcomes, pour les quatre profils. Les barres colorées sont significatives au seuil 5 % (non corrigé pour tests multiples)."
+  },
+  {
+    "objectID": "resultats.html#le-tableau-complet",
+    "href": "resultats.html#le-tableau-complet",
+    "title": "Résultats",
+    "section": "Le tableau complet",
+    "text": "Le tableau complet\n\n\n\n16 modèles : effet de la déviation identitaire selon le profil et l’outcome.\n\n\n\n\n\n\n\n\n\nProfil\nOutcome\nCoef (SE)\np-val\n\n\n\n\n\nHomme atypique (côté féminin)\nSanté perçue\n-0.185 (0.331)\n0.576\nns\n\n\nHomme atypique (côté féminin)\nSatisfaction\n\n\n\n\n\ntemps libre\n+0.201 (0.285)\n0.480\nns\n\n\n\nHomme atypique (côté féminin)\nFréquence\n\n\n\n\n\ndes sorties\n-0.508 (0.550)\n0.356\nns\n\n\n\nHomme atypique (côté féminin)\nFréquence\n\n\n\n\n\nde recevoir\n+0.476 (0.560)\n0.396\nns\n\n\n\nHomme conforme (côté masculin)\nSanté perçue\n-0.146 (0.325)\n0.653\nns\n\n\nHomme conforme (côté masculin)\nSatisfaction\n\n\n\n\n\ntemps libre\n-0.154 (0.313)\n0.624\nns\n\n\n\nHomme conforme (côté masculin)\nFréquence\n\n\n\n\n\ndes sorties\n+0.440 (0.550)\n0.424\nns\n\n\n\nHomme conforme (côté masculin)\nFréquence\n\n\n\n\n\nde recevoir\n-0.092 (0.547)\n0.867\nns\n\n\n\nFemme conforme (côté féminin)\nSanté perçue\n+0.159 (0.235)\n0.498\nns\n\n\nFemme conforme (côté féminin)\nSatisfaction\n\n\n\n\n\ntemps libre\n-0.077 (0.210)\n0.714\nns\n\n\n\nFemme conforme (côté féminin)\nFréquence\n\n\n\n\n\ndes sorties\n+0.132 (0.383)\n0.730\nns\n\n\n\nFemme conforme (côté féminin)\nFréquence\n\n\n\n\n\nde recevoir\n+0.748 (0.379)\n0.049\n*\n\n\n\nFemme atypique (côté masculin)\nSanté perçue\n-0.281 (0.263)\n0.285\nns\n\n\nFemme atypique (côté masculin)\nSatisfaction\n\n\n\n\n\ntemps libre\n-0.022 (0.224)\n0.921\nns\n\n\n\nFemme atypique (côté masculin)\nFréquence\n\n\n\n\n\ndes sorties\n+0.343 (0.431)\n0.427\nns\n\n\n\nFemme atypique (côté masculin)\nFréquence\n\n\n\n\n\nde recevoir\n-0.645 (0.433)\n0.136\nns"
+  },
+  {
+    "objectID": "resultats.html#ce-que-ça-dit",
+    "href": "resultats.html#ce-que-ça-dit",
+    "title": "Résultats",
+    "section": "Ce que ça dit",
+    "text": "Ce que ça dit\n\n  15 / 16\n  \n    effets non significatifs\n    La déviation identitaire n'affecte systématiquement aucun outcome \n    — ni pour les hommes, ni pour les femmes, ni dans le sens de la conformité, \n    ni dans le sens de l'écart.\n  \n\n\n\n  1 / 16\n  \n    effet marginal (p = 0,049)\n    Femmes conformes → recevoir chez soi. À la limite du seuil 5 % et \n    non robuste à la correction pour tests multiples \n    (seuil de Bonferroni = 0,003 pour 16 tests).\n  \n\n\n\n\n\n\n\n\nImportantLe résultat en une phrase\n\n\n\nSur 16 tests systématiques, la déviation identitaire par rapport à la norme de son groupe de sexe n’affecte ni le bien-être psychologique ni la vie sociale — quel que soit le sexe et quelle que soit la direction de la déviation.\n\n\n→ Discussion"
+  }
+]
